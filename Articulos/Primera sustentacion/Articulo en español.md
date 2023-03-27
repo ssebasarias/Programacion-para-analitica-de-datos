@@ -1,5 +1,5 @@
-Palabras clave
-Big dataPrevisión económicaMinería de datosEspacio-temporal
+# Big dataPrevisión económicaMinería de datosEspacio-temporal
+
 1. DSM: En la compleja situación económica actual, ¿a qué retos se enfrentan los métodos tradicionales de previsión económica y financiera?
 Shouyang Wang: En primer lugar, en la era del big data, los actuales métodos comunes de previsión económica y financiera tienen problemas de oportunidad. En concreto, los métodos estadísticos de datos existentes tienen el problema del desfase temporal, por lo que es difícil captar a tiempo los cambios de tendencia ante emergencias, lo que no puede proporcionar sugerencias oportunas y eficaces a los departamentos de toma de decisiones.
 
