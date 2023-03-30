@@ -25,7 +25,7 @@ white_selection = white_wines[selected_cols]
 # Histogramas
 fig, axs = plt.subplots(nrows=3, ncols=2, figsize=(16,12))
 
-for i, col in enumerate(selected_cols): # se cambia 'data.columns' por 'selected_cols'
+for i, col in enumerate(selected_cols):
     ax = axs[i//2][i%2]
     sns.histplot(ax=ax, data=red_selection, x=col, bins=25, kde=True) 
     
