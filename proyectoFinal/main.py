@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn
 
-
 # Leer el data set
 df = pd.read_csv("Fish.csv")
 
@@ -16,7 +15,9 @@ df.isnull().sum()
 df.duplicated().sum()
 
 # Limpiar y transformar los datos (en este caso no hay mucho que hacer, solo cambiar el nombre de una columna)
-df = df.rename(columns={"Length1":"Length_Vertical"})
+df = df.rename(columns={"Length1":"Length_fish_cm"})
+df = df.rename(columns={"Length2":"Height_fish_cm"})
+df = df.rename(columns={"Length3":"Width_fish_cm"})
 
 # Explorar los datos con estadísticas descriptivas y gráficos
 df.describe()
