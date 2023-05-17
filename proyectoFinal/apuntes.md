@@ -31,4 +31,28 @@ Mínimo: valor más pequeño de cada columna.
 Cuartiles (25%, 50%, 75%): valores que dividen los datos ordenados en cuatro partes iguales. El primer cuartil (25%) indica el valor por debajo del cual cae el 25% de los datos; la mediana (50%) indica el valor por debajo del cual se encuentra el 50% de los datos, mientras que el tercer cuartil (75%) indica el valor por debajo del cual se encuentra el 75% de los datos.
 Máximo: valor más grande de cada columna.
 La salida del método "describe" puede ayudarte a entender mejor la distribución de tus datos, a identificar valores atípicos y a comparar diferentes grupos de datos. Por ejemplo, si tienes un conjunto de datos que contiene información financiera sobre diferentes empresas, puedes utilizar este método para obtener estadísticas como el promedio de ingresos, la variabilidad de los ingresos y los máximos y mínimos de cada categoría para comparar el rendimiento financiero de las diferentes empresas.
+___________________
 
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Import the dataset
+df = pd.read_csv("fish_market.csv")
+
+# Create a scatterplot of the data
+plt.scatter(df["length"], df["weight"])
+
+# Fit a linear regression line to the data
+reg = LinearRegression()
+reg.fit(df[["length"]], df["weight"])
+
+# Calculate the R-squared value
+r_squared = reg.score(df[["length"]], df["weight"])
+
+# Predict the weight of a fish given its length and price
+length = 10
+price = 5
+weight = reg.predict([[length, price]])
+
+print(weight)
